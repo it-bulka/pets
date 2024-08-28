@@ -1,0 +1,17 @@
+.treat-content {
+  flex-basis: toPercent(756, var(--container));
+  max-width: 756px;
+}
+
+.treat-content__title {
+  font-family: var(--font-family-secondary, sans-serif);
+  font-weight: map-get($font-weights, bold);
+  font-size: 60px;
+  line-height: map-get($line-height, xxl);
+}
+
+.treat-content__text {
+  margin: 27px 0 36px;
+  font-size: map-get($font-sizes, large);
+  line-height: map-get($line-height, large);
+}

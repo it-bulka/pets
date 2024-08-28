@@ -1,0 +1,116 @@
+.groom-care {
+  @include flexBox;
+}
+
+.groom-care__list {
+  flex-basis: toPercent(612, var(--container));
+  max-width: 612px;
+}
+
+.groom-list {
+}
+
+.groom-list__title {
+  font-family: var(--font-family-secondary, sans-serif);
+  font-weight: map-get($font-weights, bold);
+  font-size: map-get($font-sizes, xl);
+  line-height: map-get($line-height, large);
+}
+
+.groom-list__info {
+  font-size: map-get($font-sizes, large);
+  line-height: map-get($line-height, large);
+
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+
+  & li::before {
+    content: url("./../img/decorators/paw-bullet.svg");
+  }
+}
+
+.groom-img {
+  & > img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.groom__slider {
+  position: relative;
+}
+
+.groom-slider__nav {
+  position: absolute;
+  top: toPercent(236, 525);
+  left: 0;
+  width: 100%;
+  padding: 0 toPercent(90, var(--container));
+
+  @include flexBox;
+
+  & > button {
+    display: block;
+    width: 25px;
+    height: 48px;
+    color: var(--text-primary);
+
+    &:hover,
+    &:active {
+      color: var(--text-accent);
+    }
+  }
+
+  & svg {
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.groom-slider__prev {
+}
+
+.pets {
+  margin: 121px 0;
+  padding-inline: toPercent(90, var(--container));
+  @include flexBox;
+  position: relative;
+
+  &:before {
+    content: url("./../img/decorators/star.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: toPercent(41, var(--container));
+    height: toPercent(68, 470);
+  }
+
+  &:after {
+    content: url("./../img/decorators/stick-star.svg");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: toPercent(47, var(--container));
+    height: toPercent(54, 470);
+  }
+}
+
+.pets__item {
+  object-fit: cover;
+  max-width: toPercent(251.86, var(--container));
+
+  border-radius: 120.5px;
+  overflow: hidden;
+
+  &:nth-child(2n+2) {
+    border-radius: 135px;
+    max-width: toPercent(289.5, var(--container));
+  }
+}

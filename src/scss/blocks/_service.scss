@@ -1,0 +1,25 @@
+.service {
+}
+
+.service__row {
+  @include flexBox($justify: center) {
+    gap: toPercent(87, var(--container));
+  }
+}
+
+.service__item {
+  @include flexBox($justify: flex-start) {
+    flex-direction: column;
+    gap: 4px
+  }
+  font-family: var(--font-family-secondary);
+  font-weight: map-get($font-weights, bold);
+  font-size: map-get($font-sizes, xl);
+  line-height: map-get($line-height, xxl);
+
+  & > image {
+    object-fit: contain;
+    width: toPercent(350, var(--container));
+    aspect-ratio: 350 / 291;
+  }
+}

@@ -1,0 +1,50 @@
+<section class="groom">
+  <div class="container">
+    <div class="groom-care">
+      @@include('./elements/treat-content.html', {
+        title: "Qualified personal care for all breeds",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque augue eros, pellentesque nec tempor eu, sollicitudin at dolor. Cras commodo venenatis diam, nec venenatis massa auctor at.",
+      })
+      
+      <div class="groom-care__list groom-list">
+        <h5 class="groom-list__title">All full grooms include</h5>
+        <ul class="groom-list__info">
+          <li>A Warm Massage Jet Wash</li>
+          <li>Fluff Dry</li>
+          <li>Nails Trimmed</li>
+          <li>Paw Pads Shaved</li>
+        </ul>
+      </div>
+        
+    </div>
+  </div>
+  <div class="container groom-img">
+    <img src="./img/pets/grooming.png" alt="Groom image">
+  </div>
+  <div class="container">
+    <div class="groom__slider">
+      <div class="groom-slider__nav">
+        <button class="groom-slider__prev">
+          <svg>
+            <use href="./img/sprite.svg#img--decorators--arrow-left"></use>
+          </svg>
+        </button>
+        <button class="groom-slider__next">
+          <svg>
+            <use href="./img/sprite.svg#img--decorators--arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      @@include('./elements/groom/slide.html')
+    </div>
+  </div>
+  <div class="container">
+    <div class="pets">
+      <img src="./../img/slider/slider-dog-1.png" alt="" class="pets__item">
+      <img src="./../img/slider/slider-dog-2.png" alt="" class="pets__item">
+      <img src="./../img/slider/slider-dog-3.png" alt="" class="pets__item">
+      <img src="./../img/slider/slider-dog-4.png" alt="" class="pets__item">
+      <img src="./../img/slider/slider-dog-5.png" alt="" class="pets__item">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+.groom-slide {
+  --width: 1097;
+
+  width: toPercent(var(--width), var(--container));
+  max-width: 1097px;
+  margin: auto;
+
+  @include flexBox($justify: flex-start) {
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  & > img {
+    width: clamp(200px, toPercent(350, var(--width)), 350px);
+  }
+
+  &__text {
+    font-size: map-get($font-sizes, large);
+    line-height: map-get($line-height, large);
+  }
+
+  &__title {
+    font-weight: map-get($font-weights, medium);
+    font-size: map-get($font-sizes, xxl);
+    line-height: map-get($line-height, large);
+  }
+}

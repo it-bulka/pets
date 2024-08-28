@@ -1,0 +1,9 @@
+.pets-group {
+  padding: 125px 0 141px;
+
+  & > img {
+    width: 100%;
+    aspect-ratio: 1776 / 854;
+    object-fit: cover;
+  }
+}

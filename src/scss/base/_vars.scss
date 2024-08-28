@@ -1,0 +1,29 @@
+:root {
+	--container: 1776;
+	--container-padding: 18px;
+	--container-width: calc(var(--container) + var(--container-padding) * 2);
+
+
+	/* COLORS */
+	--yellow-primary: #edb24e;
+	--pink-primary: #ffb7a1;
+	--pink-secondary: #ffbfbe;
+	--green-dark: #919f88;
+	--blue: #c8cfd7;
+	--gray: #95a1af;
+	--black: #333;
+
+	--text-primary: var(--black);
+	--text-accent: var(--yellow-primary);
+
+	--bg-primary: rgb(248, 247, 245);
+	--bg-accent: var(--yellow-primary);
+
+	/* FONTS */
+	--font-family-primary: "Montserrat", sans-serif;
+	--font-family-secondary: "Nunito", sans-serif;
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}

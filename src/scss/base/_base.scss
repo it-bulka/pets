@@ -1,0 +1,34 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--text-color);
+    font-family: var(--font-family-primary);
+	font-weight: map-get($font-weights, normal);
+	font-size: map-get($font-sizes, base);
+	background-color: var(--bg-primary);
+	overflow-x: hidden;
+}
+
+.btn {
+	padding: 17px 36.76px 16px;
+	min-width: 151px;
+	background-color: var(--bg-accent);
+	border-radius: 50px;
+}
+
+$columns: 10;
+$gap: 15px;
+
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		width: calc((100% - ($gap * ($columns - 1)) / $columns) * #{$i} / $columns);
+	}
+
+}
+
+.btn-left {
+	margin-left: auto;
+	display: block;
+}

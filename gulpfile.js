@@ -9,6 +9,7 @@ gulp.task(
 	gulp.series(
 		'clean:dev',
 		gulp.parallel('html:dev', 'sass:dev', 'images:dev', 'fonts:dev', 'files:dev', 'js:dev'),
+		gulp.parallel('sprite:dev'),
 		gulp.parallel('server:dev', 'watch:dev')
 	)
 );
@@ -18,6 +19,7 @@ gulp.task(
 	gulp.series(
 		'clean:build',
 		gulp.parallel('html:build', 'sass:build', 'images:build', 'fonts:build', 'files:build', 'js:build'),
+		gulp.parallel('sprite:build'),
 		gulp.parallel('server:build')
 	)
 );

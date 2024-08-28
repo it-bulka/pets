@@ -1,0 +1,71 @@
+.footer {
+	background-color: var(--bg-accent);
+	padding: 100px 0;
+}
+
+.content {
+	@include flexBox($align: flex-start, $justify: flex-start) {
+		gap: toPercent(70, var(--container));
+	};
+	font-size: map-get($font-sizes, medium);
+	line-height: 25px;
+}
+
+.logo--footer {
+	line-height: map-get($line-height, xxl);
+	width: clamp(200px, toPercent(414, var(--container)),414px);
+
+	svg {
+		width: 100%;
+		aspect-ratio: 414 / 30;
+		vertical-align: middle;
+	}
+}
+
+.info__list {
+	flex-basis: toPercent(300, var(--container));
+
+	&.menu {
+		margin-left: auto;
+	}
+
+	& h6 {
+		font-family: var(--font-family-secondary, sans-serif);
+		font-weight: map-get($font-weights, bold);
+		font-size: map-get($font-sizes, xl);
+		line-height: map-get($line-height, xxl);
+	}
+
+	li:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.menu {
+}
+
+.menu__list {
+}
+
+.contact {
+}
+
+.contact__list {
+}
+
+.hr {
+	height: 1px;
+	background-color: var(--black);
+	width: 100%;
+	margin: 35px 0;
+}
+
+.copyright {
+	@include flexBox($justify: flex-start) {
+		gap: toPercent(70, var(--container));
+	};
+}
+
+.copyright__terms {
+	margin-left: auto;
+}

@@ -1,0 +1,38 @@
+@mixin mediaMobile() {
+  @media (max-width: var(--mobile-size)) {
+    @content;
+  }
+}
+
+@mixin mediaTablet() {
+  @media (max-width: var(--tablet-size)) {
+    @content;
+  }
+}
+
+@mixin mediaLaptop() {
+  @media (max-width: var(--laptop-size)) {
+    @content;
+  }
+}
+
+@mixin flexBox($justify: space-between, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+
+  @content;
+}
+
+@mixin fontToRem($px) {
+  font-size: calc($px / var(--font-size-main) * 1rem);
+}
+
+@function toPercent($inner, $outer) {
+  @return calc($inner / $outer * 100%);
+}
+
+@function toVW($inner, $outer) {
+  @return calc($inner / $outer * 100vw);
+}
+
